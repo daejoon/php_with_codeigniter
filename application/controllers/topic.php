@@ -29,7 +29,7 @@ class Topic extends CI_Controller
         $this->load->view('head');
         $this->load->view('topic_list', array('topics' => $topics));
         $topic = $this->topic_model->get($id);
-        $this->load->helper('url');
+        $this->load->helper(array('url', 'HTML', 'korean'));
         $this->load->view('get', array('topic' => $topic));
         $this->load->view('footer');
     }
