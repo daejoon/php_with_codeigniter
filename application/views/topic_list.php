@@ -1,4 +1,5 @@
-<ul>
+<div class="span2">
+<ul class="nav nav-tabs nav-stacked">
     <?php
     foreach ($topics as $entry) {
         ?>
@@ -7,3 +8,4 @@
     }
     ?>
 </ul>
+</div>
