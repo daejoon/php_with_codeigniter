@@ -11,4 +11,9 @@ class Topic_model extends CI_Model
     {
         return $this->db->query('SELECT * FROM topic')->result();
     }
+
+    public function get($topic_id)
+    {
+        return $this->db->get_where('topic', array('id'=>$topic_id))->row();
+    }
 }
