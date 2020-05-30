@@ -14,7 +14,7 @@
 ```
 $ docker-compose up
 ```
-- 컨테이서 시작
+- 컨테이너 시작
 ```
 $ docker-compose start
 ```
