@@ -5,6 +5,6 @@
 env/mysql/data/
 
 !/application/config/template/
-/application/**/config.php
-/application/**/database.php
+/application/config/**/config.php
+/application/config/**/database.php
 /application/logs/
