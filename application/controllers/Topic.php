@@ -16,21 +16,37 @@ class Topic extends CI_Controller
 
     function index()
     {
-        $topics = $this->topic_model->gets();
-        $this->load->view('head');
-        $this->load->view('topic_list', array('topics' => $topics));
+        $this->_head();
         $this->load->view('main');
         $this->load->view('footer');
     }
 
     function get($id)
     {
-        $topics = $this->topic_model->gets();
-        $this->load->view('head');
-        $this->load->view('topic_list', array('topics' => $topics));
-        $topic = $this->topic_model->get($id);
+        $this->_head();
         $this->load->helper(array('url', 'HTML', 'korean'));
+
+        $topic = $this->topic_model->get($id);
         $this->load->view('get', array('topic' => $topic));
         $this->load->view('footer');
+    }
+
+    function add()
+    {
+        $this->_head();
+
+        echo $this->input->post('title');
+        echo ",";
+        echo $this->input->post('description');
+
+        $this->load->view('add');
+        $this->load->view('footer');
+    }
+
+    function _head()
+    {
+        $this->load->view('head');
+        $topics = $this->topic_model->gets();
+        $this->load->view('topic_list', array('topics' => $topics));
     }
 }
