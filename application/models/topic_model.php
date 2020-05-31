@@ -21,4 +21,15 @@ class Topic_model extends CI_Model
 
         return $this->db->get_where('topic', array('id'=>$topic_id))->row();
     }
+
+    public function add($title, $description)
+    {
+        $this->db->set('created', 'NOW()', false);
+        $this->db->insert('topic', array(
+            'title'=>$title,
+            'description'=>$description
+        ));
+//        echo $this->db->last_query();
+        return $this->db->insert_id();
+    }
 }

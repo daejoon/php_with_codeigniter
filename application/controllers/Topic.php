@@ -46,7 +46,12 @@ class Topic extends CI_Controller
         }
         else
         {
-            echo "성공";
+            $topic_id = $this->topic_model->add(
+                $this->input->post('title'),
+                $this->input->post('description')
+            );
+            $this->load->helper('url');
+            redirect('/topic/get/' . $topic_id);
         }
 
         $this->load->view('footer');
