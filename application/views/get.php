@@ -9,6 +9,6 @@
         </div>
     </article>
     <div>
-        <a href="/index.php/topic/add" class="btn">추가</a>
+        <a href="/topic/add" class="btn">추가</a>
     </div>
 </div>

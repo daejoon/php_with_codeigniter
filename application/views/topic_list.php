@@ -3,7 +3,7 @@
     <?php
     foreach ($topics as $entry) {
         ?>
-        <li><a href="/index.php/topic/<?=$entry->id?>"><?=$entry->title?></a></li>
+        <li><a href="/topic/<?=$entry->id?>"><?=$entry->title?></a></li>
         <?php
     }
     ?>
